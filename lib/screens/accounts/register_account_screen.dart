@@ -28,7 +28,7 @@ class _RegisterAccountScreenState extends State<RegisterAccountScreen> {
             clipper: CustomAppBarClipper(),
             color: AppColors.textColor,
             elevation: 8,
-            shadowColor: Colors.black.withOpacity(0.5),
+            shadowColor: AppColors.textColor.withOpacity(0.5),
             child: Container(
               height: 300,
               child: Center(
