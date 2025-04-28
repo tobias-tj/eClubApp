@@ -8,18 +8,17 @@ class NavigationWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentRouteName =
-        GoRouter.of(context).routeInformationProvider.value.location;
+    final String currentRoute = GoRouterState.of(context).uri.path;
 
     final Map<String, int> routesIndex = {
       '/home': 0,
-      '/transferir': 1,
-      '/qr': 2,
-      '/analisis': 3,
-      '/mas': 4,
+      '/transfer': 1,
+      '/qrCode': 2,
+      '/analytic': 3,
+      '/more': 4,
     };
 
-    final currentIndex = routesIndex[currentRouteName] ?? 0;
+    final currentIndex = routesIndex[currentRoute] ?? 0;
 
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
@@ -42,17 +41,21 @@ class NavigationWrapper extends StatelessWidget {
               context,
               icon: HugeIcons.strokeRoundedArrowDataTransferDiagonal,
               label: 'Transferir',
-              route: '/transferir',
+              route: '/transfer',
               index: 1,
               currentIndex: currentIndex,
             ),
-            _buildQrItem(context,
-                icon: HugeIcons.strokeRoundedQrCode, route: '/qrCode'),
+            _buildQrItem(
+              context,
+              icon: HugeIcons.strokeRoundedQrCode,
+              route: '/qrCode',
+              currentIndex: currentIndex,
+            ),
             _buildNavItem(
               context,
               icon: HugeIcons.strokeRoundedAnalyticsUp,
               label: 'Análisis',
-              route: '/analisis',
+              route: '/analytic',
               index: 3,
               currentIndex: currentIndex,
             ),
@@ -60,7 +63,7 @@ class NavigationWrapper extends StatelessWidget {
               context,
               icon: HugeIcons.strokeRoundedUserStory,
               label: 'Más',
-              route: '/mas',
+              route: '/more',
               index: 4,
               currentIndex: currentIndex,
             ),
@@ -107,21 +110,30 @@ Widget _buildQrItem(
   BuildContext context, {
   required IconData icon,
   required String route,
+  required int currentIndex,
 }) {
+  final int qrIndex = 2;
+
+  final bool isActive = currentIndex == qrIndex;
+
   return InkWell(
     onTap: () => context.go(route),
     child: Container(
       height: 100,
       width: 65,
       decoration: BoxDecoration(
-          color: AppColors.redPrimaryColor,
-          borderRadius: BorderRadius.circular(30)),
+        color: isActive
+            ? AppColors.redPrimaryColor.withOpacity(0.9)
+            : AppColors.redPrimaryColor.withOpacity(0.7),
+        borderRadius: BorderRadius.circular(30),
+      ),
       child: Center(
-          child: HugeIcon(
-        icon: icon,
-        color: AppColors.backgroundColor,
-        size: 42,
-      )),
+        child: HugeIcon(
+          icon: icon,
+          color: AppColors.backgroundColor,
+          size: 42,
+        ),
+      ),
     ),
   );
 }
