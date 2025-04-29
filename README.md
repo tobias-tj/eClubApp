@@ -40,11 +40,12 @@ Sigue estos pasos para generar el archivo APK de la aplicación:
    cd e-club
 
 2. ** Instalar dependencias:
-   flutter pub get
+      ```bash
+       flutter pub get
 
 4. **Para generar un APK de producción sin firma personalizada (modo release sin keystore), podés utilizar el siguiente comando:
-  ```bash
-  flutter build apk --release
+    ```bash
+    flutter build apk --release
 
 ### Ubicacion del apk:
 build/app/outputs/flutter-apk/app-release.apk
