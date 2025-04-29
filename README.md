@@ -42,8 +42,7 @@ Sigue estos pasos para generar el archivo APK de la aplicación:
 2. ** Instalar dependencias:
    flutter pub get
 
-4. **Comando para generar version Release (Sin firmar)
-   Para generar un APK de producción sin firma personalizada (modo release sin keystore), podés utilizar el siguiente comando:
+4. **Para generar un APK de producción sin firma personalizada (modo release sin keystore), podés utilizar el siguiente comando:
   ```bash
   flutter build apk --release
 
