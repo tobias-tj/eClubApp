@@ -8,19 +8,19 @@ Aplicación móvil desarrollada con **Flutter** como parte de una evaluación t�
 > ## 📱 Capturas de Pantalla
 
 <div align="center">
-  <img src="assets/screens/screen1.png" width="200" alt="Pantalla 1"/>
-  <img src="assets/screens/screen2.png" width="200" alt="Pantalla 2"/>
-  <img src="assets/screens/screen3.png" width="200" alt="Pantalla 3"/>
-  <img src="assets/screens/screen4.png" width="200" alt="Pantalla 4"/>
+  <img src="assets/screens/screen1.png" width="180" alt="Pantalla 1"/>
+  <img src="assets/screens/screen2.png" width="180" alt="Pantalla 2"/>
+  <img src="assets/screens/screen3.png" width="180" alt="Pantalla 3"/>
+  <img src="assets/screens/screen4.png" width="180" alt="Pantalla 4"/>
   <br>
-  <img src="assets/screens/screen5.png" width="200" alt="Pantalla 5"/>
-  <img src="assets/screens/screen6.png" width="200" alt="Pantalla 6"/>
-  <img src="assets/screens/screen7.png" width="200" alt="Pantalla 7"/>
-  <img src="assets/screens/screen8.png" width="200" alt="Pantalla 8"/>
+  <img src="assets/screens/screen5.png" width="180" alt="Pantalla 5"/>
+  <img src="assets/screens/screen6.png" width="180" alt="Pantalla 6"/>
+  <img src="assets/screens/screen7.png" width="180" alt="Pantalla 7"/>
+  <img src="assets/screens/screen8.png" width="180" alt="Pantalla 8"/>
   <br>
-  <img src="assets/screens/screen9.png" width="200" alt="Pantalla 9"/>
-  <img src="assets/screens/screen10.png" width="200" alt="Pantalla 10"/>
-  <img src="assets/screens/screen11.png" width="200" alt="Pantalla 11"/>
+  <img src="assets/screens/screen9.png" width="180" alt="Pantalla 9"/>
+  <img src="assets/screens/screen10.png" width="180" alt="Pantalla 10"/>
+  <img src="assets/screens/screen11.png" width="180" alt="Pantalla 11"/>
 </div>
 
 ## 🚀 Cómo Generar el APK
