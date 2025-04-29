@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:e_club/styles/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 class AnalyticScreen extends StatelessWidget {
@@ -10,7 +11,10 @@ class AnalyticScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Análisis'),
+        title: const Text(
+          'Análisis',
+          style: TextStyle(color: Colors.grey),
+        ),
         centerTitle: true,
         actions: [
           Padding(
@@ -82,7 +86,7 @@ class AnalyticScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
+                      GestureDetector(
                         onTap: () {},
                         child: _buildAnalyticCard(
                           context,
@@ -90,8 +94,10 @@ class AnalyticScreen extends StatelessWidget {
                           label: 'Ingresos',
                         ),
                       ),
-                      InkWell(
-                        onTap: () {},
+                      GestureDetector(
+                        onTap: () {
+                          context.pushNamed('expenses');
+                        },
                         child: _buildAnalyticCard(
                           context,
                           imagePath: 'assets/images/gasto.png',

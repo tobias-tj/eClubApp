@@ -8,4 +8,7 @@ class AppColors {
   static const Color redSecondaryColor = Color.fromRGBO(221, 0, 59, 1);
   static const Color backgroundColor = Color.fromRGBO(247, 240, 237, 1);
   static const Color textColor = Colors.white;
+  static const Color transportColor = Color.fromRGBO(207, 231, 165, 1);
+  static const Color restaurantColor = Color.fromRGBO(218, 176, 248, 1);
+  static const Color shoppingColor = Color.fromRGBO(169, 182, 252, 1);
 }
