@@ -1,3 +1,4 @@
+import 'package:e_club/components/analytic/button_extract.dart';
 import 'package:e_club/components/analytic/interactive_doughnut.dart';
 import 'package:e_club/models/category.dart';
 import 'package:e_club/utils/format_currency.dart';
@@ -22,6 +23,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
   @override
   Widget build(BuildContext context) {
     final selectedMonth = expensesMonth[selectedMonthIndex];
+    final size = MediaQuery.of(context).size.width;
 
     final List<Category> categories = selectedMonth.categories.map((category) {
       return Category(
@@ -37,6 +39,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
       appBar: AppBar(
         backgroundColor: AppColors.backgroundColor,
         elevation: 0,
+        centerTitle: true,
         title: const Text(
           'Gastos',
           style: TextStyle(fontSize: 20, color: Colors.grey),
@@ -168,6 +171,7 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
               },
             ),
           ),
+          ButtonExtract(size: size),
         ],
       ),
     );

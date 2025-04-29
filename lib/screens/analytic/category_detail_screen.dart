@@ -1,3 +1,4 @@
+import 'package:e_club/components/analytic/button_extract.dart';
 import 'package:e_club/components/analytic/doughnut_chart_painter.dart';
 import 'package:e_club/models/category.dart';
 import 'package:e_club/models/expense_item.dart';
@@ -12,10 +13,10 @@ class CategoryDetailScreen extends StatefulWidget {
   final String initialMonth;
 
   const CategoryDetailScreen({
-    Key? key,
+    super.key,
     required this.category,
     required this.initialMonth,
-  }) : super(key: key);
+  });
 
   @override
   State<CategoryDetailScreen> createState() => _CategoryDetailScreenState();
@@ -54,6 +55,8 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size.width;
+
     final selectedMonth = expensesMonth[selectedMonthIndex];
     final dateFormat = DateFormat('dd/MM/yyyy');
 
@@ -62,6 +65,7 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
       appBar: AppBar(
         backgroundColor: AppColors.backgroundColor,
         elevation: 0,
+        centerTitle: true,
         title: Text(
           widget.category.name,
           style: const TextStyle(fontSize: 20, color: Colors.grey),
@@ -149,6 +153,7 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
               ),
             ),
           ),
+          SizedBox(height: 28),
           Expanded(
             flex: 3,
             child: ListView.builder(
@@ -197,8 +202,8 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
                         ),
                         Text(
                           dateFormat.format(expense.dateTime),
-                          style: const TextStyle(
-                              fontSize: 12, color: Colors.black),
+                          style:
+                              const TextStyle(fontSize: 12, color: Colors.grey),
                         )
                       ],
                     ),
@@ -207,6 +212,7 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
               },
             ),
           ),
+          ButtonExtract(size: size),
         ],
       ),
     );
