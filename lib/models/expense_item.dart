@@ -5,13 +5,15 @@ class ExpenseItem {
   final String place;
   final double amount;
   final DateTime dateTime;
+  final int codeReference;
 
-  ExpenseItem({
-    String? id,
-    required this.place,
-    required this.amount,
-    required this.dateTime,
-  }) : id = id ?? UniqueKey().toString();
+  ExpenseItem(
+      {String? id,
+      required this.place,
+      required this.amount,
+      required this.dateTime,
+      required this.codeReference})
+      : id = id ?? UniqueKey().toString();
 }
 
 class ExpenseCategory {

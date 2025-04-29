@@ -48,12 +48,14 @@ class MockService {
                   id: UniqueKey().toString(),
                   place: 'Lido Bar',
                   amount: 60000,
-                  dateTime: DateTime(2025, 4, 6, 13, 20)),
+                  dateTime: DateTime(2025, 4, 6, 13, 20),
+                  codeReference: 1234434324131),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Hamburguesería XYZ',
                   amount: 120000,
-                  dateTime: DateTime(2025, 4, 18, 21)),
+                  dateTime: DateTime(2025, 4, 18, 21),
+                  codeReference: 123423214),
             ]),
         ExpenseCategory(
             name: 'Compras',
@@ -65,12 +67,14 @@ class MockService {
                   id: UniqueKey().toString(),
                   place: 'Tienda Stock',
                   amount: 100000,
-                  dateTime: DateTime(2025, 4, 9, 11, 30)),
+                  dateTime: DateTime(2025, 4, 9, 11, 30),
+                  codeReference: 83327863),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'La Vienesa',
                   amount: 120000,
-                  dateTime: DateTime(2025, 4, 20, 10, 15)),
+                  dateTime: DateTime(2025, 4, 20, 10, 15),
+                  codeReference: 93936327),
             ]),
         ExpenseCategory(
             id: transportCatId,
@@ -82,12 +86,14 @@ class MockService {
                   id: UniqueKey().toString(),
                   place: 'Uber',
                   amount: 60000,
-                  dateTime: DateTime(2025, 4, 2, 7, 50)),
+                  dateTime: DateTime(2025, 4, 2, 7, 50),
+                  codeReference: 55443323),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Bolt',
                   amount: 90000,
-                  dateTime: DateTime(2025, 4, 16, 19, 45))
+                  dateTime: DateTime(2025, 4, 16, 19, 45),
+                  codeReference: 4323123)
             ])
       ]),
       ExpenseMonth(month: 'Mayo 2025', total: 620000, categories: [
@@ -101,17 +107,20 @@ class MockService {
                   id: UniqueKey().toString(),
                   place: 'McDonald\'s',
                   amount: 50000,
-                  dateTime: DateTime(2025, 5, 2, 12)),
+                  dateTime: DateTime(2025, 5, 2, 12),
+                  codeReference: 32131231),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Pizza hut',
                   amount: 75000,
-                  dateTime: DateTime(2025, 5, 10, 19, 30)),
+                  dateTime: DateTime(2025, 5, 10, 19, 30),
+                  codeReference: 3636261),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Johnny B. Good',
                   amount: 75000,
-                  dateTime: DateTime(2025, 5, 22, 22)),
+                  dateTime: DateTime(2025, 5, 22, 22),
+                  codeReference: 7386182),
             ]),
         ExpenseCategory(
             id: shoppingCatId,
@@ -123,12 +132,14 @@ class MockService {
                   id: UniqueKey().toString(),
                   place: 'Farmacenter',
                   amount: 70000,
-                  dateTime: DateTime(2025, 5, 5, 9, 15)),
+                  dateTime: DateTime(2025, 5, 5, 9, 15),
+                  codeReference: 786231387612),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Ferretería ABC',
                   amount: 200000,
-                  dateTime: DateTime(2025, 5, 19, 16)),
+                  dateTime: DateTime(2025, 5, 19, 16),
+                  codeReference: 900129381),
             ]),
         ExpenseCategory(
             id: transportCatId,
@@ -140,17 +151,20 @@ class MockService {
                   id: UniqueKey().toString(),
                   place: 'Uber',
                   amount: 50000,
-                  dateTime: DateTime(2025, 5, 3, 8, 40)),
+                  dateTime: DateTime(2025, 5, 3, 8, 40),
+                  codeReference: 7377217822),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Bolt',
                   amount: 60000,
-                  dateTime: DateTime(2025, 5, 15, 18, 20)),
+                  dateTime: DateTime(2025, 5, 15, 18, 20),
+                  codeReference: 10321989012),
               ExpenseItem(
                   id: UniqueKey().toString(),
                   place: 'Uber',
                   amount: 40000,
-                  dateTime: DateTime(2025, 5, 28, 21, 30))
+                  dateTime: DateTime(2025, 5, 28, 21, 30),
+                  codeReference: 8921739812)
             ]),
       ]),
       ExpenseMonth(
@@ -164,23 +178,23 @@ class MockService {
             icon: Icons.restaurant,
             expenses: [
               ExpenseItem(
-                id: UniqueKey().toString(),
-                place: 'El Café de Aca',
-                amount: 57000,
-                dateTime: DateTime(2025, 6, 5, 10, 30),
-              ),
+                  id: UniqueKey().toString(),
+                  place: 'El Café de Aca',
+                  amount: 57000,
+                  dateTime: DateTime(2025, 6, 5, 10, 30),
+                  codeReference: 237739201),
               ExpenseItem(
-                id: UniqueKey().toString(),
-                place: 'Hard Rock Café',
-                amount: 95000,
-                dateTime: DateTime(2025, 6, 12, 20, 45),
-              ),
+                  id: UniqueKey().toString(),
+                  place: 'Hard Rock Café',
+                  amount: 95000,
+                  dateTime: DateTime(2025, 6, 12, 20, 45),
+                  codeReference: 9210923198),
               ExpenseItem(
-                id: UniqueKey().toString(),
-                place: 'TGI Fridays',
-                amount: 78000,
-                dateTime: DateTime(2025, 6, 20, 21, 10),
-              ),
+                  id: UniqueKey().toString(),
+                  place: 'TGI Fridays',
+                  amount: 78000,
+                  dateTime: DateTime(2025, 6, 20, 21, 10),
+                  codeReference: 5648478932789),
             ],
           ),
           ExpenseCategory(
@@ -193,12 +207,14 @@ class MockService {
                     id: UniqueKey().toString(),
                     place: 'Shopping del Sol',
                     amount: 120000,
-                    dateTime: DateTime(2025, 6, 18, 15, 20)),
+                    dateTime: DateTime(2025, 6, 18, 15, 20),
+                    codeReference: 7894329784387),
                 ExpenseItem(
                     id: UniqueKey().toString(),
                     place: 'Paseo La Galería',
                     amount: 180000,
-                    dateTime: DateTime(2025, 6, 15, 17, 10)),
+                    dateTime: DateTime(2025, 6, 15, 17, 10),
+                    codeReference: 861472393),
               ]),
           ExpenseCategory(
               id: transportCatId,
@@ -210,17 +226,20 @@ class MockService {
                     id: UniqueKey().toString(),
                     place: 'Uber',
                     amount: 73300,
-                    dateTime: DateTime(2025, 6, 3, 8, 10)),
+                    dateTime: DateTime(2025, 6, 3, 8, 10),
+                    codeReference: 7541293013),
                 ExpenseItem(
                     id: UniqueKey().toString(),
                     place: 'Bolt',
                     amount: 71833,
-                    dateTime: DateTime(2025, 6, 10, 19, 50)),
+                    dateTime: DateTime(2025, 6, 10, 19, 50),
+                    codeReference: 4839291332),
                 ExpenseItem(
                     id: UniqueKey().toString(),
                     place: 'Uber',
                     amount: 30000,
-                    dateTime: DateTime(2025, 6, 25, 22, 15))
+                    dateTime: DateTime(2025, 6, 25, 22, 15),
+                    codeReference: 82316872163)
               ])
         ],
       ),

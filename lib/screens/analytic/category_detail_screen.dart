@@ -161,51 +161,55 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
               itemCount: filteredExpenses.length,
               itemBuilder: (context, index) {
                 final expense = filteredExpenses[index];
-                return Card(
-                  margin: const EdgeInsets.symmetric(vertical: 8),
-                  color: AppColors.backgroundColor,
-                  child: ListTile(
-                    leading: Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: widget.category.color.withOpacity(0.2),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        widget.category.icon,
-                        color: widget.category.color,
-                      ),
-                    ),
-                    title: Column(
-                      children: [
-                        Text(
-                          expense.place,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
+                return GestureDetector(
+                  onTap: () => context
+                      .push('/expense-detail', extra: {'expense': expense}),
+                  child: Card(
+                    margin: const EdgeInsets.symmetric(vertical: 8),
+                    color: AppColors.backgroundColor,
+                    child: ListTile(
+                      leading: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: widget.category.color.withOpacity(0.2),
+                          shape: BoxShape.circle,
                         ),
-                        Text(
-                          widget.category.name,
-                          style:
-                              const TextStyle(color: Colors.grey, fontSize: 14),
-                        )
-                      ],
-                    ),
-                    trailing: Column(
-                      children: [
-                        SizedBox(height: 9),
-                        Text(
-                          'Gs. ${expense.amount.toStringAsFixed(0)}',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: Colors.black),
+                        child: Icon(
+                          widget.category.icon,
+                          color: widget.category.color,
                         ),
-                        Text(
-                          dateFormat.format(expense.dateTime),
-                          style:
-                              const TextStyle(fontSize: 12, color: Colors.grey),
-                        )
-                      ],
+                      ),
+                      title: Column(
+                        children: [
+                          Text(
+                            expense.place,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 14),
+                          ),
+                          Text(
+                            widget.category.name,
+                            style: const TextStyle(
+                                color: Colors.grey, fontSize: 14),
+                          )
+                        ],
+                      ),
+                      trailing: Column(
+                        children: [
+                          SizedBox(height: 9),
+                          Text(
+                            'Gs. ${expense.amount.toStringAsFixed(0)}',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: Colors.black),
+                          ),
+                          Text(
+                            dateFormat.format(expense.dateTime),
+                            style: const TextStyle(
+                                fontSize: 12, color: Colors.grey),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 );

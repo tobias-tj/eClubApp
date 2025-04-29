@@ -1,9 +1,11 @@
 import 'package:e_club/models/category.dart';
+import 'package:e_club/models/expense_item.dart';
 import 'package:e_club/navigation_wrapper.dart';
 import 'package:e_club/screens/accounts/login_account_screen.dart';
 import 'package:e_club/screens/accounts/register_account_screen.dart';
 import 'package:e_club/screens/analytic/analytic_screen.dart';
 import 'package:e_club/screens/analytic/category_detail_screen.dart';
+import 'package:e_club/screens/analytic/expense_detail_screen.dart';
 import 'package:e_club/screens/analytic/expenses_screen.dart';
 import 'package:e_club/screens/home_screen.dart';
 import 'package:e_club/screens/more/more_screen.dart';
@@ -80,7 +82,15 @@ final GoRouter appRouter = GoRouter(initialLocation: '/splash', routes: [
           category: extra['category'] as Category,
           initialMonth: extra['month'] as String);
     },
-  )
+  ),
+  GoRoute(
+    name: 'expense-detail',
+    path: '/expense-detail',
+    builder: (context, state) {
+      final extra = state.extra as Map<String, dynamic>;
+      return ExpenseDetailScreen(expenseItem: extra['expense'] as ExpenseItem);
+    },
+  ),
 ]);
 
 class NoTransitionPage extends CustomTransitionPage {
